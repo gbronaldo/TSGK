@@ -22,41 +22,46 @@
 -tokio ghoul +
 
 #séries
--maluco no pedaço
--kenan & kell
--chaves
--eu a patroa e as crianças
--alf ETeimoso
--super-man small ville
--game of thrones
+-maluco no pedaço +
+-icarly +
+-chaves +
+-alf ETeimoso +
+-super-man small ville +
+-game of thrones +
+-barney +
+-teletubbies +
  
 #desenhos
--kim possible
--3 espiães demais
--turma do pateta
--ben 10
--tom & jerry
--super-choque
--x-men evolution
--simpsons
--pantera cor de rosa
--bob esponja
--he-man
--aladin
--phineas e ferb
+-caillou +
+-scooby Doo +
+-kim possible +
+-ducktales +
+-ben 10 +
+-pica-pau +
+-tom & jerry +
+-x-men +
+-simpsons +
+-pantera cor de rosa +
+-bob esponja +
+-he-man +
+-phineas e ferb +
+-rugrats +
+-aladdin +
 
 #filme animações
--rei leão
--rei leão 2
--valente
--pequena sereia
--moana
--frozen
--tarzan
--spirit
--mulan
--mogli
--corcunda de notredame*
+-madagascar +
+-rei leão +
+-rei leão 2 +
+-valente +
+-pequena sereia +
+-moana +
+-frozen +
+-tarzan +
+-spirit +
+-mulan +
+-mogli +
+-corcunda de notredame* +
+-os incriveis +
 
 #filmes
 -batman
@@ -69,7 +74,6 @@
 -piratas do caribe
 -star wars
 -avengers
--os incriveis
 
 #games
 -sonic
