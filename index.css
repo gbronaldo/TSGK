@@ -1,0 +1,101 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+.topo{
+    color: #FDDF98;
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 40vh;
+    line-height: 40vh;
+    font-size: 42px;
+}
+/* .topo h1{
+    border: 1px solid white;
+    line-height: 180px;
+} */
+.medio{
+    color: #FDDF98;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+input:focus{
+    outline: none;
+}
+.input-index{
+    height: 36px;
+    width: 250px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background-color: #FDDF98;
+    color: #545454;
+    box-shadow: #A9982A 0px 5px 1px;
+}
+span {
+    animation-name: input-animation;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    color: #545454;
+    position: relative;
+    top: 30px;
+    right: 0px;
+    animation-fill-mode: forwards;
+}
+#btn-go{
+    margin-top: 50px;
+    box-shadow: #A9982A 0px 0px 10px;
+    width: 50px;
+    height: 50px;
+}
+@keyframes input-animation{
+    to{
+        color: #FDDF98;
+        position: relative;
+        top: 0px;
+        right: 30px;
+    }
+    from{
+        color: #545454;
+        position: relative;
+        top: 30px;
+        right: 0px;
+    }
+}
+
+@media only screen and (min-width:1580px) and (max-width:1920px){
+    .topo{
+        font-size: 82px;
+    }   
+    .medio{
+        font-size: 24px;
+    }
+    .input-index{
+        font-size: 28px;
+        height: 72px;
+        width: 500px;
+    }
+    #btn-go{
+        width: 100px;
+        height: 100px;
+    }
+    span{
+        top: 50px;
+        right: 0px;
+    }
+    @keyframes input-animation{
+        to{
+            color: #FDDF98;
+            position: relative;
+            top: 0px;
+            right: 90px;
+        }
+        from{
+            color: #545454;
+            position: relative;
+            top: 50px;
+            right: 0px;
+        }
+    }
+}

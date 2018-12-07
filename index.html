@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>TSGK</title>
+</head>
+<body onload="setTimeout(focar, 1000);">
+    <div class="topo">
+            Trilha Sonora Geek
+        <!-- <h1>Tilha Sonora Geek</h1> -->
+    </div>
+    <div class="medio">
+        <span>
+            Informe seu Geek Name
+        </span>
+        <br>
+        <!-- placeholder="Informe seu Geek Name" -->
+        <input type="text" maxlength="25" minlength="3" class="input-index">
+        <br>
+        <input type="submit" class="input-index" id="btn-go" value="Go">
+    </div>
+    <!-- <div class="baixo">
+
+    </div> -->
+    <script>
+        function focar(){
+            document.getElementsByClassName("input-index")[0].focus();
+        }
+    </script>
+</body>
+</html>
