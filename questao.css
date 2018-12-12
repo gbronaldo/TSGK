@@ -2,6 +2,22 @@ body{
     background-color: black;
     margin: 0;
 }
-.box-class{
-    height: 76vh;
+.body{
+    background-color: blue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.box-class{
+    margin: auto;
+    height: 76vh;
+    width: 65vw;
+    background-color: red;
+}
+/* .dois{
+    display: flex;
+    background-color: green;
+    height: 76vh;
+    width: 65vw;
+} */
