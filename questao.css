@@ -1,7 +1,126 @@
 body{
-    background-color: black;
     margin: 0;
 }
+.corpo{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #171717, black);
+}
 .box-class{
-    height: 76vh;
+    height: 89vh;
+    /* height: 680px; */
+    width: 65vw;
+    margin: auto;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, black, #9E0202);
+}
+.question{
+    background-color: rgba(0,0,0,.2);
+    /* background-color: lightgreen; */
+    margin: auto;
+    margin-top: 55px;
+    border-radius: 20px;
+    width: 75%;
+    height: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question-text{
+    /* border: 1px solid yellow; */
+    font-family: Segoe UI;
+    text-align: center;
+    /* line-height: 139px; */
+    font-size: 32px;
+    color: #FDDF98;
+}
+.music-full{
+    margin: auto;
+    margin-top: 45px;
+    border-radius: 100px;
+    width: 45%;
+    height: 9%;
+    /* height: 60px; */
+    background-color: white;
+}
+.music-charge{
+    background-image: linear-gradient(to bottom, #CFB530, #8B7920, #77641A, #8B7920, #CFB530);
+    height: 101%;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.music-play{
+    /* border: 1px solid black; */
+    /* width: 40px; */
+    /* height: 40px; */
+    /* line-height: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+.music-play img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.anime-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 45px;
+    background-image: linear-gradient(to bottom, #FD9898, #3D0202);
+}
+.anime-logo img{
+    width: 70px;
+    height: 70px;
+}
+.box-options{
+    /* height: 1000px; */
+    /* width: 1000px; */
+    /* border: 1px solid black; */
+    height: 25%;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;                           
+    background-image: linear-gradient(to bottom, #EFD56E, #D4BE31);
+    width: 318px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    border: 1px solid #A9982A;
+    box-shadow: 0px 5px 1px #A9982A;
+    color: #545454;
+    font-family: Segoe UI;
+    cursor: pointer;
+}
+.options p{
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 20px;
+}
+.linha01{
+    /* background-color: blue; */
+    display: flex;
+    flex: row;
+    justify-content: center;
+    height: 50%;
+}
+.linha02{
+    /* background-color: green; */
+    display: flex;
+    flex: row;
+    justify-content: center;
+    height: 50%;
+}
+#option01{
+    /* background-image: linear-gradient(to bottom, black, #9E0202); */
 }
