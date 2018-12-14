@@ -20,14 +20,24 @@
         <!-- placeholder="Informe seu Geek Name" -->
         <input type="text" maxlength="25" minlength="3" class="input-index">
         <br>
-        <input type="submit" class="input-index" id="btn-go" value="Go">
+        <input type="submit" class="input-index" id="btn-go" value="Go" onmousedown="btn_go_clicked();" onmouseup="btn_go_normal();" onmouseleave="btn_go_normal();">
     </div>
     <!-- <div class="baixo">
 
     </div> -->
     <script>
         function focar(){
-            document.getElementsByClassName("input-index")[0].focus();
+            document.getElementsByClassName('input-index')[0].focus();
+        }
+        function btn_go_clicked(){
+            document.getElementById('btn-go').style.backgroundColor = "#EFD56E";
+            document.getElementById('btn-go').style.marginTop = "55px";
+            document.getElementById('btn-go').style.boxShadow = "none";
+        }
+        function btn_go_normal(){
+            document.getElementById('btn-go').style.backgroundColor = "#FDDF98";
+            document.getElementById('btn-go').style.marginTop = "50px";
+            document.getElementById('btn-go').style.boxShadow = "0px 5px 0px #A9982A ";
         }
     </script>
 </body>
