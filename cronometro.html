@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cronômetro</title>
+    <style>
+        #timer{
+            background-color: blueviolet;
+            height: 50px;
+            width: 100px;
+            font-size: 32pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer" onclick= "iniciar()">
+        
+    </div>
+    <script>
+        var cronometro;
+        function iniciar(){
+            var min = 0;
+            var seg = 0;
+            var finish = 0;
+            cronometro = setInterval(function(){
+                if (seg == 2) {
+                    seg = 0;
+                    min++;
+                    if (min == 2) {
+                        min = 0;
+                    }
+                }
+                if((seg==0) && (min==0)){
+                    finish++;
+                    min = 0;
+                    seg = 0;
+                }
+                if (finish == 2) {
+                    // alert('oi');
+                    min = 0;
+                    seg = 0;
+                }
+                
+                if((min < 10) && (seg < 10)){
+                    document.getElementById('timer').innerHTML = "0"+min+":"+"0"+seg;
+                }
+                else if ((min >= 10) && (seg < 10)){
+                    document.getElementById('timer').innerHTML = min+":"+"0"+seg;
+                }
+                else if ((min < 10) && (seg >= 10)){
+                    document.getElementById('timer').innerHTML = "0"+min+":"+seg;
+                }
+                else if ((min >= 10) && (seg >= 10)){
+                    document.getElementById('timer').innerHTML = min+":"+seg;
+                }
+                seg++;
+            },1000)
+        }
+       
+    </script>
+</body>
+</html>
