@@ -7,28 +7,35 @@
     <link rel="stylesheet" href="questao.css">
     <title>TSGK-Questão</title>
 </head>
-<body>
+<body onload="iniciar()">
     <div class="corpo">
         <div class="box-class">
             <div class="box-question">
                 <div class="question">
-                    <p class="question-text">
-                        Qual é o título GEEK dessa trilha sonora?&nbsp&nbsp&nbsp&nbsp00:35
-                    </p>
+                    <div class="question-text">
+                        <ul>
+                            <li>
+                                Qual é o título GEEK dessa trilha sonora?
+                            </li>
+                            <li id="timer">
+                                00:00
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="box-music">
                 <div class="music-full">
                     <div class="music-charge">
                         <div class="music-play">
-                            <img id="button-music" src="icons/play-btn.png" alt="play" onclick="play();">
+                            <img id="button-music" src="media/icons/play-btn.png" alt="play" onclick="play();">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="box-anime">
                 <div class="anime-logo">
-                    <img src="icons/icon.png" alt="">
+                    <img src="media/icons/icon.png" alt="">
                 </div>
             </div>
             <div class="box-options">
@@ -60,48 +67,13 @@
         </div>
     </div>
 
-    <script>
-        var cont = 0;
-        function play(){
-            if( cont % 2 == 0){
-                document.getElementById('button-music').src = "icons/pause.png";
-                cont = 0;
-            }
-            else{
-                document.getElementById('button-music').src = "icons/play-btn.png";
-            }
-            cont++;
-        }
-        function clicked(optionNum){
-            switch (optionNum) {
-                case 01:
-                    // document.getElementById('option01').style.borderColor = "#490000";
-                    document.getElementsByClassName('options')[0].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
-                    // document.getElementsByClassName('options')[0].style.color = "white";
-                    // document.getElementsByClassName('options')[0].style.boxShadow = "0px 5px 1px #490000";
-                break;
-                case 02: 
-                document.getElementsByClassName('options')[1].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
-                break;
-                case 03:
-                document.getElementsByClassName('options')[2].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
-                break;
-                case 04:
-                document.getElementsByClassName('options')[3].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
-                break;
-                // error
-                // document.getElementById('option01').style.borderColor = "#490000";
-                // document.getElementsByClassName('options')[0].style.backgroundImage = "linear-gradient(to bottom, black, #9E0202)";
-                // document.getElementsByClassName('options')[0].style.color = "white";
-                // document.getElementsByClassName('options')[0].style.boxShadow = "0px 5px 1px #490000";
-            }
-        }
-        function normal(){ 
-            document.getElementsByClassName('options')[0].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
-            document.getElementsByClassName('options')[1].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
-            document.getElementsByClassName('options')[2].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
-            document.getElementsByClassName('options')[3].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
-        }
+    <script src="js/music.js">
+    </script>
+
+    <script src="js/options.js">
+    </script>
+
+    <script src="js/cronometro.js">
     </script>
 </body>
 </html>
