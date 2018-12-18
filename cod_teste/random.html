@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random</title>
+    <style>
+        #tam_vet{
+            background-color: yellow;
+        }
+        #position{
+            background-color: red;
+        }
+        #result{
+            background-color: lightblue;
+        }
+        #join{
+            background-color: lightgreen;
+        }
+        #tam_sorteio{
+            background-color: grey;
+        }
+        #join2{
+            background-color: lightpink;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tam_vet">
+
+    </div>
+    <div id="position">
+
+    </div>
+    <div id="result">
+
+    </div>
+    <div id="join">
+
+    </div>
+    <div id="tam_sorteio">
+
+    </div>
+    <div id="join2">
+
+    </div>
+
+    <button onclick="sorteio()">Sorteio</button>
+
+<script>
+var lista = ["death note","hunter x hunter","dbz","cdz","yu yu hakusho","inuyasha","shingeki no kyojin"];
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+// VISUALIZANDO TAMANHO DO VETOR
+document.getElementById('tam_vet').innerHTML = lista.length;
+
+// // GERANDO NUM RANDOM DA LISTA
+// var x = random(1,lista.length);
+// document.getElementById('position').innerHTML = x;
+
+// // EXIBINDO INFORMAÇÃO DA POSIÇÃO DO RANDOM
+// document.getElementById('result').innerHTML = lista[x-1];
+
+// USANDO SEPARADO E MOSTRANDO A LISTA ORIGINAL
+var j = lista.join(" | ");   
+document.getElementById('join').innerHTML = j;
+
+// RETIRANDO INFORMAÇÃO SORTEADA DA LISTA PARA NOVO SORTEIO
+// E EXIBINDO NOVA LISTA COM O SEPARADOR
+// lista.splice(x-1,1);
+// var j = lista.join(" | ");   
+// document.getElementById('join2').innerHTML = j;
+
+function sorteio(){
+document.getElementById('tam_sorteio').innerHTML = lista.length + " TAMANHO DA LISTA antes do SORTEIO";
+    // GERANDO NUM RANDOM DA LISTA
+var x = random(1,lista.length);
+document.getElementById('position').innerHTML = x+" número sorteado";
+
+// EXIBINDO INFORMAÇÃO DA POSIÇÃO DO RANDOM
+document.getElementById('result').innerHTML = lista[x-1];
+
+// RETIRANDO INFORMAÇÃO SORTEADA DA LISTA PARA NOVO SORTEIO
+// E EXIBINDO NOVA LISTA COM O SEPARADOR
+    lista.splice(x-1,1);
+    var j = lista.join(" |==| ");   
+    document.getElementById('join2').innerHTML = j;
+// document.getElementById('tam_sorteio').innerHTML = lista.length + " TAMANHO DA LISTA DEPOIS do SORTEIO";
+}
+</script>
+</body>
+</html>
