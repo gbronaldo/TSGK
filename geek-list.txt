@@ -30,6 +30,7 @@
 -game of thrones +
 -barney +
 -teletubbies +
+- friends +
  
 #desenhos
 -caillou +
@@ -76,14 +77,13 @@
 -avengers
 
 #games
--sonic
--mario
--top gear
+-sonic +
+-mario +
+-top gear +
 -street fighter
--tetris
--zelda
--prince of persia
--mega man
--mortal kombat
--fifa
+-tetris +
+-zelda +
+-prince of persia +
+-mega man +
+-mortal kombat +
 -gta +
