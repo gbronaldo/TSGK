@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Letra Maiuscula</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<body onload="myFunction()">
+
+<!-- <p>Click the button to display the array values after the split.</p>
+
+<button onclick="myFunction()">Try it</button> -->
+<p id="original"></p>
+<p id="demo"></p>
+<p id="alternativa"></p>
+<p id="quebra"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+  var str = "how_are_you_doing_today?";
+//   var str = "game_of_thrones";
+  document.getElementById('original').innerHTML = "Frase Original: "+str;
+  var res = str.split("_");
+  
+  document.getElementById("demo").innerHTML = "Frase em Array: "+res;
+  
+  var alternativa = res;
+//   document.getElementById("alternativa").innerHTML = alternativa.length;
+  
+  var palavra = "";
+  var letra = "";
+  for (i = 0; i < alternativa.length; i++){
+    alternativa[i] = alternativa[i].split("");
+    palavra = palavra + alternativa[i];
+    for(y = 0; y < alternativa[i].length; y++){
+        // letra = y;
+        // SEPARANDO PALAVRAS PELA PRIMEIRA LETRA
+        if(y == 0){
+            letra = letra+ " " + alternativa[i][y].toUpperCase();;
+        }
+        else{
+            letra = letra + alternativa[i][y];
+        }
+    }
+    // break;
+  }
+  document.getElementById("demo2").innerHTML = "Frase Formatada: "+letra;
+//   document.getElementById("demo2").innerHTML = alternativa[0][alternativa[0].length-1];
+//   document.getElementById("quebra").innerHTML = palavra;
+//   alert(alternativa[0].length);
+// document.getElementById("quebra").innerHTML = alternativa[0];
+//   document.getElementById("quebra").innerHTML = alternativa[0][0];
+
+//   document.getElementById("demo2").innerHTML = res[0];
+//   var letra = str.split("");
+  
+//   document.getElementById("demo3").innerHTML = letra[0].toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

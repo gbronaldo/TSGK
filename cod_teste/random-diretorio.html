@@ -43,7 +43,7 @@
         </audio>
     </div>
     <script>
-        var pastas = ["animacoes","japan","desenhos","games","series"];
+       
         // function sorteio(){
         //     document.getElementById('lista').innerHTML = lista.join(" | ");
             
@@ -54,34 +54,64 @@
         // }
         
         function iniciar(){
+            var pastas = ["animacoes","desenhos","games","japan","series"];
+            var num_Pasta = random(1,pastas.length);
+            var nome_Pasta = pastas[num_Pasta-1];
             // alert(pastas.length);
-            var op = random(1,pastas.length);
-            // var nome_Pasta = 
-            alert('pasta '+op);
-            switch (op) {
+            // var num_Pasta = random(1,pastas.length);
+            // var nome_Pasta = pastas[num_Pasta-1];
+            alert('pasta '+num_Pasta);
+            switch (num_Pasta) {
                 case 1:
-                    var lista_animacoes = [
+                    // var lista_animacoes
+                    var lista = [
                         "corcunda_notre_dame",
                         "frozen",
                         "madagascar",
                         "moana",
                         "mogli",
                         "mulan",
-                        "os_inciveis",
+                        "os_incriveis",
                         "pequena_sereia",
                         "rei_leao",
                         "rei_leao_2",
                         "spirit",
                         "tarzan",
                         "valente"];
-                        var num_AudioAnimacoes = random(1,lista_animacoes.length);
-                        var nome_AudioAnimacoes = lista_animacoes[num_AudioAnimacoes-1];
+                        // var num_AudioAnimacoes = random(1,lista_animacoes.length);
+                        // var nome_AudioAnimacoes = lista_animacoes[num_AudioAnimacoes-1];
 
-                        alert('num de lista de animacoes '+num_AudioAnimacoes+' nome '+nome_AudioAnimacoes);
-                        document.getElementById('song').src = "../media/musics/animacoes/"+nome_AudioAnimacoes+".mp3";
+                        // alert('num de lista de animacoes '+num_AudioAnimacoes+' nome '+nome_AudioAnimacoes);
+                        // document.getElementById('song').src = "../media/musics/animacoes/"+nome_AudioAnimacoes+".mp3";
                 break;
                 case 2:
-                    var lista_games = [
+                    // var lista_desenhos
+                    var lista = [
+                        "aladdin",
+                        "ben10",
+                        "bob_esponja",
+                        "caillou",
+                        "ducktales",
+                        "he_man",
+                        "kim_possible",
+                        "pantera_rosa",
+                        "phineas_ferb",
+                        "pica_pau",
+                        "rugrats",
+                        "scooby_doo",
+                        "simpsons",
+                        "thundercats",
+                        "tom_jerry",
+                        "x_men"];
+                        // var num_AudioDesenhos = random(1,lista_desenhos.length);
+                        // var nome_AudioDesenhos = lista_desenhos[num_AudioDesenhos-1];
+
+                        // alert('num de lista de desenhos '+num_AudioDesenhos+' nome '+nome_AudioDesenhos);
+                        // document.getElementById('song').src = "../media/musics/desenhos/"+nome_AudioDesenhos+".mp3";
+                break;
+                case 3:
+                    // var lista_games
+                    var lista = [
                         "gta_san_andreas",
                         "mario",
                         "megaman",
@@ -92,38 +122,15 @@
                         "tetris",
                         "top_gear",
                         "zelda"];
-                        var num_AudioGames = random(1,lista_games.length);
-                        var nome_AudioGames = lista_games[num_AudioGames-1];
+                        // var num_AudioGames = random(1,lista_games.length);
+                        // var nome_AudioGames = lista_games[num_AudioGames-1];
 
-                        alert('num de lista de games '+num_AudioGames+' nome '+nome_AudioGames);
-                        document.getElementById('song').src = "../media/musics/games/"+nome_AudioGames+".mp3";
-                break;
-                case 3:
-                    var lista_desenhos = [
-                        "aladdin",
-                        "ben10",
-                        "bob esponja",
-                        "caillou",
-                        "ducktales",
-                        "he_man",
-                        "kim_possible",
-                        "pantera_rosa",
-                        "phineas_ferb",
-                        "pica_pau",
-                        "rugrats",
-                        "scooby_doo",
-                        "simpsons"
-                        ,"thundercats"
-                        ,"tom_jerry"
-                        ,"x_men"];
-                        var num_AudioDesenhos = random(1,lista_desenhos.length);
-                        var nome_AudioDesenhos = lista_desenhos[num_AudioDesenhos-1];
-
-                        alert('num de lista de desenhos '+num_AudioDesenhos+' nome '+nome_AudioDesenhos);
-                        document.getElementById('song').src = "../media/musics/desenhos/"+nome_AudioDesenhos+".mp3";
+                        // alert('num de lista de games '+num_AudioGames+' nome '+nome_AudioGames);
+                        // document.getElementById('song').src = "../media/musics/games/"+nome_AudioGames+".mp3";
                 break;
                 case 4:
-                var lista_japan = [
+                // var lista_japan
+                var lista = [
                         "cdz_hyoga",
                         "cdz_theme",
                         "dbgt_theme",
@@ -136,22 +143,23 @@
                         "hunter_hunter_ohayo",
                         "inuyasha",
                         "jaspion",
-                        "naruto_loneliness"
-                        ,"one_piece"
-                        ,"pokemon"
-                        ,"power_rangers"
-                        ,"sailor_moon"
-                        ,"tokyo_ghoul"
-                        ,"yu_yu_hakusho"];
-                        var num_AudioJapan = random(1,lista_japan.length);
-                        var nome_AudioJapan = lista_japan[num_AudioJapan-1];
+                        "naruto_loneliness",
+                        "one_piece",
+                        "pokemon",
+                        "power_rangers",
+                        "sailor_moon",
+                        "tokyo_ghoul",
+                        "yu_yu_hakusho"];
+                        // var num_AudioJapan = random(1,lista_japan.length);
+                        // var nome_AudioJapan = lista_japan[num_AudioJapan-1];
 
-                        alert('num de lista de japan '+num_AudioJapan+' nome '+nome_AudioJapan);
-                        document.getElementById('song').src = "../media/musics/japan/"+nome_AudioJapan+".mp3";
+                        // alert('num de lista de japan '+num_AudioJapan+' nome '+nome_AudioJapan);
+                        // document.getElementById('song').src = "../media/musics/japan/"+nome_AudioJapan+".mp3";
                 break;
                 case 5:
-                var lista_series = [
-                        "alf",
+                // var lista_series
+                var lista = [
+                        "alf_o_eteimoso",
                         "barney",
                         "chaves",
                         "friends",
@@ -160,15 +168,26 @@
                         "maluco_no_pedaco",
                         "small_ville",
                         "teletubbies"];
-                        var num_AudioSeries = random(1,lista_series.length);
-                        var nome_AudioSeries = lista_series[num_AudioSeries-1];
+                        // var num_AudioSeries = random(1,lista_series.length);
+                        // var nome_AudioSeries = lista_series[num_AudioSeries-1];
 
-                        alert('num de lista de series '+num_AudioSeries+' nome '+nome_AudioSeries);
-                        document.getElementById('song').src = "../media/musics/series/"+nome_AudioSeries+".mp3";
-                break;
-                default:
+                        // alert('num de lista de series '+num_AudioSeries+' nome '+nome_AudioSeries);
+                        // document.getElementById('song').src = "../media/musics/series/"+nome_AudioSeries+".mp3";
                 break;
             }
+             // lista.splice(x-1,1);
+             var viewLista = lista.join(" |==| ");   
+                // alert('View Lista '+viewLista);
+                // alert('Tamanho Lista '+lista.length);
+                var num_Audio = random(1,lista.length);
+                // alert('Numero audio'+num_Audio);
+                var nome_Audio = lista[num_Audio-1];
+                // alert('Nome pasta '+nome_Pasta+'<br> Nome audio '+nome_Audio);
+                alert(' TESTE Num pasta '+num_Pasta+' pasta '+nome_Pasta+' num de lista de  '+num_Audio+' nome '+nome_Audio);
+                document.getElementById('song').src = "../media/musics/"+nome_Pasta+"/"+nome_Audio+".mp3";
+
+                var nomeFormatado = nome_Audio.replace("_"," ");
+                document.getElementById('lista').innerHTML = nomeFormatado;
         }
 
         function random(min, max) {
