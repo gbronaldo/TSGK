@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to add elements to the array.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // document.getElementById("demo").innerHTML = fruits;
+    
+    function myFunction() {
+        var numero = random(1,fruits.length);
+        fruits.splice(numero-1,1);
+        document.getElementById("demo").innerHTML = fruits;
+    }
+    function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+    </script>
+</body>
+</html>
