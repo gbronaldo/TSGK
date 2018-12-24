@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="questao.css">
     <title>TSGK-Questão</title>
 </head>
-<body onload="iniciar()">
+<body onload="start(); random_music()">
     <div class="corpo">
         <div class="box-class">
             <div class="box-question">
@@ -35,31 +35,31 @@
             </div>
             <div class="box-anime">
                 <div class="anime-logo">
-                    <img src="media/icons/icon.png" alt="">
+                    <img src="media/icons/icon.png" alt="Logo">
                 </div>
             </div>
             <div class="box-options">
                 <div class="linha01">
                     <div class="options" id="option01" onmousedown="clicked(01)" onmouseup="normal()">
-                        <p>
-                            Cavaleiros do Zodíaco
+                        <p id="option01_text">
+                            <!-- Cavaleiros do Zodíaco -->
                         </p>
                     </div>
                     <div class="options" id="option02" onmousedown="clicked(02)" onmouseup="normal()">
-                        <p>
-                            Dragon Ball Z
+                        <p id="option02_text">
+                            <!-- Dragon Ball Z -->
                         </p>
                     </div>
                 </div>
                 <div class="linha02">
                     <div class="options" id="option03" onmousedown="clicked(03)" onmouseup="normal()">
-                        <p>
-                            Hunter x Hunter
+                        <p id="option03_text">
+                            <!-- Hunter x Hunter -->
                         </p>
                     </div>
                     <div class="options" id="option04" onmousedown="clicked(04)" onmouseup="normal()">
-                        <p>
-                            Dragon Ball GT
+                        <p id="option04_text">
+                            <!-- Dragon Ball GT -->
                         </p>
                     </div>
                 </div>
@@ -67,6 +67,9 @@
         </div>
     </div>
 
+    <!-- <script>
+        document.getElementById('option01_text').innerHTML = "oi";
+    </script> -->
     <script src="js/music.js">
     </script>
 
@@ -74,6 +77,9 @@
     </script>
 
     <script src="js/cronometro.js">
+    </script>
+
+    <script src="js/sorteio.js">
     </script>
 </body>
 </html>

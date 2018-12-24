@@ -61,20 +61,19 @@
 -spirit +
 -mulan +
 -mogli +
--corcunda de notredame* +
+-corcunda de notre dame* +
 -os incriveis +
 
 #filmes
--batman
--missão impossivel
--super-man
--indiana jones
--007
--jurassic park
--harry potter
--piratas do caribe
--star wars
--avengers
+-batman +
+-missão impossivel +
+-super-man +
+-indiana jones +
+-007 +
+-harry potter +
+-piratas do caribe +
+-star wars +
+-avengers +
 
 #games
 -sonic +

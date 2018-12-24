@@ -1,5 +1,5 @@
 var cronometro;
-function iniciar(){
+function start(){
     
     var min = 0;
     var seg = 0;
