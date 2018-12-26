@@ -1,5 +1,9 @@
-var musica_tocar = [];
+var musica_ID = document.getElementById('musica');
+var media_Diretorio = null;
+var valor_Resp = null;
+var ativar_Botao = true;
 var contador = 0;
+var con = 0;
 var lista_Animacoes = [
     "corcunda_notre_dame",
     "frozen",
@@ -78,6 +82,8 @@ var lista_Series = [
     "teletubbies"];
 
 function random_music(){
+    var musica_tocar = [];
+    // var pasta_tocar = [];
     for(i = 0; i < 4; i++){
     var pastas = ["animacoes","desenhos","games","japan","series"];
     var num_Pasta = random(1,pastas.length);
@@ -85,7 +91,7 @@ function random_music(){
     // alert('pasta '+num_Pasta);
     switch (num_Pasta) {
         case 1:
-            console.log(lista_Animacoes.join('\n'));
+            // console.log(lista_Animacoes.join('\n'));
             var num_Audio_Animacoes = random(1,lista_Animacoes.length);
             var nome_Audio_Animacoes = lista_Animacoes[num_Audio_Animacoes-1];
 
@@ -95,7 +101,7 @@ function random_music(){
             
         break;
         case 2:
-            console.log(lista_Desenhos.join('\n'));
+            // console.log(lista_Desenhos.join('\n'));
             var num_Audio_Desenhos = random(1,lista_Desenhos.length);
             var nome_Audio_Desenhos = lista_Desenhos[num_Audio_Desenhos-1];
 
@@ -104,7 +110,7 @@ function random_music(){
             var nome_Audio = nome_Audio_Desenhos;
         break;
         case 3:
-            console.log(lista_Games.join('\n'));
+            // console.log(lista_Games.join('\n'));
             var num_Audio_Games = random(1,lista_Games.length);
             var nome_Audio_Games = lista_Games[num_Audio_Games-1];
 
@@ -113,7 +119,7 @@ function random_music(){
             var nome_Audio = nome_Audio_Games;
         break;
         case 4:
-            console.log(lista_Japan.join('\n'));
+            // console.log(lista_Japan.join('\n'));
             var num_Audio_Japan = random(1,lista_Japan.length);
             var nome_Audio_Japan = lista_Japan[num_Audio_Japan-1];
 
@@ -122,7 +128,7 @@ function random_music(){
             var nome_Audio = nome_Audio_Japan;
         break;
         case 5:
-            console.log(lista_Series.join('\n'));
+            // console.log(lista_Series.join('\n'));
             var num_Audio_Series = random(1,lista_Series.length);
             var nome_Audio_Series = lista_Series[num_Audio_Series-1];
 
@@ -131,32 +137,106 @@ function random_music(){
             var nome_Audio = nome_Audio_Series;
         break;
     }
-        musica_tocar.push(nome_Audio);
+  
+    var cot = 0
+    musica_tocar.push(nome_Pasta+'/'+nome_Audio);
+    // pasta_tocar.push(nome_Pasta);
+    for(j = 0; j < 4; j++){
+        if((musica_tocar[i] == musica_tocar[j])){
+            cot++;
+            if (cot > 1) {
+               console.log('SHOW'+nome_Audio); 
+            //    musica_tocar = [];
+               random_music();
+            }
+            else{
+                // console.log('+++');
+                // console.log(musica_tocar.join('\n'));
+                // console.log('*************************');
 
-        if(musica_tocar[i] == nomeAudio){
-            console.log('REPETIU, TIO');
+                nomeAudio = nome_Audio.replace(/_/g," ");
+                document.getElementById('option0'+(i+1)+'_text').innerHTML = nomeAudio;
+                if(j == 3){
+                console.log('SORTEAR MÚSICA PARA TOCAR');
+                console.log('+++');
+                var media_Tocar = random(1,musica_tocar.length);
+                media_Diretorio = musica_tocar[media_Tocar-1];
+                console.log('Diretório: '+media_Diretorio+'.mp3');
+                console.log(musica_tocar.join('\n'));
+                // console.log(musica_tocar[musica_tocar.length-2]+'/'+musica_tocar[musica_tocar.length-1]);
+                console.log('*************************');
+                musica_ID.src = "../tsgk/media/musics/"+media_Diretorio+".mp3";
+                    // console.log('MOSTRE-ME:'+'\n'+musica_tocar.join('\n'));
+                    // console.log('..................................');
+                    // console.log('PASTAS:'+'\n'+pasta_tocar.join('\n'));
+                }
+            }
         }
-        // else{
-        //     alert('nem');
-        // }
-
-        var nomeAudio = nome_Audio.replace(/_/g," ");
-        document.getElementById('option0'+(i+1)+'_text').innerHTML = nomeAudio;
-
-
     }
-    document.getElementById
-    console.log('================================================');
-    console.log(musica_tocar.join('\n'));
-    musica_tocar = [];
+    }
+    document.getElementById('button-music').src = "../tsgk/media/icons/play-btn.png";
+    ativar_Botao = true;
     contador++
-    console.log('CONTADOR: '+contador);
-    // musica_tocar = null;
-    console.log('================================================');
-    // musica_random(musica_tocar);
+    console.log('CONTADOR: '+contador+' /////////////');
 }
-function musica_random(musica_tocar) {
-    console.log('Musica Random '+'\n'+musica_tocar.join('\n'));
+function play() {
+    // alert('contador'+contador);
+    if (ativar_Botao == true) {
+        musica_ID.play();
+        document.getElementById('button-music').src = "../tsgk/media/icons/pause.png";
+        // alert('PLAY');
+        ativar_Botao = false;
+    }
+    else{
+        // alert('PAUSE');
+        musica_ID.pause();
+        document.getElementById('button-music').src = "../tsgk/media/icons/play-btn.png";
+        ativar_Botao = true;
+    }
+    // alert(ativar_Botao);
+}
+function resposta(r) {
+    // alert('musica: '+media_Diretorio+'resposta '+r);
+    // resp = media_Diretorio.replace(nome_Pasta,'');
+    var carac = media_Diretorio.split('');
+    var dir_Pasta = '';
+    console.log('carac :'+ carac);
+    do {
+        console.log('nenw'+carac[con]);
+        dir_Pasta = dir_Pasta + carac[con];
+        con++;
+    } while (carac[con] != '/');
+    console.log('dir_Pasta: '+dir_Pasta);
+    var resp = media_Diretorio.replace(dir_Pasta+'/','');
+    resp  = resp.replace(/_/g," ");
+    console.log('RESP: '+resp);
+    con = 0;
+
+    switch (r) {
+        case 'a':
+            // console.log(documento.getElementById('option01').innerHTML);
+            valor_Resp = document.getElementById('option01_text').innerHTML;
+            console.log('RESPOSTA A'+ valor_Resp);
+            break;
+        case 'b':
+            valor_Resp = document.getElementById('option02_text').innerHTML;
+            console.log('RESPOSTA B'+ valor_Resp);
+            break;
+        case 'c':
+            valor_Resp = document.getElementById('option03_text').innerHTML;
+            console.log('RESPOSTA C'+ valor_Resp);
+            break;
+        case 'd':
+            valor_Resp = document.getElementById('option04_text').innerHTML;
+            console.log('RESPOSTA D'+ valor_Resp);
+            break;
+    }
+    if(resp == valor_Resp){
+        console.log('RESPOSTA CORRETA');
+    }
+    else{
+        console.log('RESPOSTA FALSA');
+    }
 }
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
