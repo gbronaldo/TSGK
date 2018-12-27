@@ -4,6 +4,7 @@ var valor_Resp = null;
 var ativar_Botao = true;
 var contador = 0;
 var con = 0;
+var pontuacao = 0;
 var lista_Animacoes = [
     "corcunda_notre_dame",
     "frozen",
@@ -85,6 +86,11 @@ function random_music(){
     var musica_tocar = [];
     // var pasta_tocar = [];
     for(i = 0; i < 4; i++){
+    document.getElementsByClassName('options')[i].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
+    document.getElementsByClassName('options')[i].style.boxShadow = "0px 5px 1px #A9982A";
+    document.getElementsByClassName('options')[i].style.color = "#545454";
+    document.getElementsByClassName('options')[i].style.borderColor = "#A9982A";
+
     var pastas = ["animacoes","desenhos","games","japan","series"];
     var num_Pasta = random(1,pastas.length);
     var nome_Pasta = pastas[num_Pasta-1];
@@ -202,11 +208,11 @@ function resposta(r) {
     var dir_Pasta = '';
     console.log('carac :'+ carac);
     do {
-        console.log('nenw'+carac[con]);
+        // console.log('new'+carac[con]);
         dir_Pasta = dir_Pasta + carac[con];
         con++;
     } while (carac[con] != '/');
-    console.log('dir_Pasta: '+dir_Pasta);
+    // console.log('dir_Pasta: '+dir_Pasta);
     var resp = media_Diretorio.replace(dir_Pasta+'/','');
     resp  = resp.replace(/_/g," ");
     console.log('RESP: '+resp);
@@ -233,11 +239,86 @@ function resposta(r) {
     }
     if(resp == valor_Resp){
         console.log('RESPOSTA CORRETA');
+        for(var op = 1; op < 5; op++){
+            var valor_op = document.getElementById('option0'+op+'_text').innerHTML;
+            // console.log('Valor op: '+op+' valor_op '+valor_op);
+            if(valor_op == valor_Resp){
+                valor_op = valor_op.replace(/ /g,"_");
+                console.log('AQUI '+valor_op);
+                "../tsgk/media/musics/"+media_Diretorio+".mp3";
+                document.getElementById('logo').src = "../tsgk/media/logos/"+valor_op+".png";
+
+                document.getElementById('option0'+op).style.borderColor = "#074900";
+                document.getElementsByClassName('options')[op-1].style.backgroundImage = "linear-gradient(to bottom, black, #1B9503)";
+                document.getElementsByClassName('options')[op-1].style.color = "white";
+                document.getElementsByClassName('options')[op-1].style.boxShadow = "0px 5px 1px #074900";
+                pontuacao++;
+                setTimeout(random_music, 1000);
+            }
+        }
     }
     else{
         console.log('RESPOSTA FALSA');
+        // console.log('OPP &&&&&&&');
+        // console.log('resp: '+valor_Resp);
+        for(var op = 1; op < 5; op++){
+            var valor_op = document.getElementById('option0'+op+'_text').innerHTML;
+            // console.log('Valor op: '+op+' valor_op '+valor_op);
+            if(valor_op == valor_Resp){
+                // console.log('AQUI '+valor_op);
+                document.getElementById('option0'+op).style.borderColor = "#490000";
+                document.getElementsByClassName('options')[op-1].style.backgroundImage = "linear-gradient(to bottom, black, #9E0202)";
+                document.getElementsByClassName('options')[op-1].style.color = "white";
+                document.getElementsByClassName('options')[op-1].style.boxShadow = "0px 5px 1px #490000";
+                location.href = "game_over.html";
+                setTimeout(random_music, 1000);
+            }
+        }
     }
+    console.log('PONTUAÇÃO '+pontuacao);
 }
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function pressionando(letra) {
+    // alert('ooooo');
+    switch (letra) {
+        case 'a':
+        document.getElementsByClassName('options')[0].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
+
+        document.getElementsByClassName('options')[0].addEventListener('mouseout',function () {
+        document.getElementsByClassName('options')[0].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
+        document.getElementsByClassName('options')[0].style.boxShadow = "0px 5px 1px #A9982A";
+        document.getElementsByClassName('options')[0].style.color = "#545454";
+        document.getElementsByClassName('options')[0].style.border= "1px solid #A9982A";
+        });
+            break;
+        case 'b':
+        document.getElementsByClassName('options')[1].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
+        document.getElementsByClassName('options')[1].addEventListener('mouseout',function () {
+        document.getElementsByClassName('options')[1].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
+        document.getElementsByClassName('options')[1].style.boxShadow = "0px 5px 1px #A9982A";
+        document.getElementsByClassName('options')[1].style.color = "#545454";
+        document.getElementsByClassName('options')[1].style.border= "1px solid #A9982A";
+        });
+            break;
+        case 'c':
+        document.getElementsByClassName('options')[2].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
+        document.getElementsByClassName('options')[2].addEventListener('mouseout',function () {
+        document.getElementsByClassName('options')[2].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
+        document.getElementsByClassName('options')[2].style.boxShadow = "0px 5px 1px #A9982A";
+        document.getElementsByClassName('options')[2].style.color = "#545454";
+        document.getElementsByClassName('options')[2].style.border= "1px solid #A9982A";
+        });
+            break;
+        case 'd':
+        document.getElementsByClassName('options')[3].style.backgroundImage = "linear-gradient(to bottom, #A9982A, #EFD56E)";
+        document.getElementsByClassName('options')[3].addEventListener('mouseout',function () {
+        document.getElementsByClassName('options')[3].style.backgroundImage = "linear-gradient(to bottom, #EFD56E, #D4BE31)";
+        document.getElementsByClassName('options')[3].style.boxShadow = "0px 5px 1px #A9982A";
+        document.getElementsByClassName('options')[3].style.color = "#545454";
+        document.getElementsByClassName('options')[3].style.border= "1px solid #A9982A";
+        });
+            break;
+    }
 }

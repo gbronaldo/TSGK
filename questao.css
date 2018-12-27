@@ -183,6 +183,11 @@ body{
         width: 35px;
         height: 35px;
     }
+    .music-charge{
+        width: 105%;
+        position: relative;
+        right: 2%; 
+    }
     .anime-logo{
         width: 70px;
         height: 70px;
@@ -201,6 +206,10 @@ body{
     }
     .options p{
         font-size: 18px;
+    }
+    .music-charge{
+        height: 103%;
+        /* background-color: #9E0202; */
     }
     .music-play img{
         width: 40px;
@@ -237,6 +246,11 @@ body{
     .question-text{
         font-size: 25px;
     }
+    .music-charge{
+        width: 102%;
+        position: relative;
+        right: 1%; 
+    }
 }
 /* and (min-height:600px) */
 @media only screen  and (min-width:1440px)  and (max-width:1600px){
@@ -262,6 +276,11 @@ body{
         width: 50px;
         height: 50px;
     }
+    .music-charge{
+        width: 102%;
+        position: relative;
+        right: 1%; 
+    }
     .anime-logo{
         width: 100px;
         height: 100px;
@@ -285,6 +304,11 @@ body{
     .music-play img{
         width: 60px;
         height: 60px;
+    }
+    .music-charge{
+        width: 102%;
+        position: relative;
+        right: 1%; 
     }
     .anime-logo{
         width: 128px;
@@ -310,6 +334,13 @@ body{
         width: 80px;
         height: 80px;
     }
+    .music-charge{
+        width: 102%;
+        height: 102%;
+        position: relative;
+        right: 1%; 
+        bottom: 1%;
+    }
     .anime-logo{
         width: 180px;
         height: 180px;
@@ -333,6 +364,11 @@ body{
     .music-play img{
         width: 100px;
         height: 100px;
+    }
+    .music-charge{
+        width: 102%;
+        position: relative;
+        right: 1%; 
     }
     .box-anime{
         border: 1px solid black;
