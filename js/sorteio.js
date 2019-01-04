@@ -83,6 +83,7 @@ var lista_Series = [
     "teletubbies"];
 
 function random_music(){
+    document.getElementById('logo').src = "../tsgk/media/icons/icon.png";
     var musica_tocar = [];
     // var pasta_tocar = [];
     for(i = 0; i < 4; i++){
@@ -204,6 +205,10 @@ function play() {
 function resposta(r) {
     // alert('musica: '+media_Diretorio+'resposta '+r);
     // resp = media_Diretorio.replace(nome_Pasta,'');
+    console.log('<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>');
+    console.log('media_Diretorio: '+ media_Diretorio);
+    console.log('<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>');
+    // var carac = media_Diretorio.split('');
     var carac = media_Diretorio.split('');
     var dir_Pasta = '';
     console.log('carac :'+ carac);
@@ -243,17 +248,22 @@ function resposta(r) {
             var valor_op = document.getElementById('option0'+op+'_text').innerHTML;
             // console.log('Valor op: '+op+' valor_op '+valor_op);
             if(valor_op == valor_Resp){
-                valor_op = valor_op.replace(/ /g,"_");
+                // valor_op = valor_op.replace(/ /g,"_");
                 console.log('AQUI '+valor_op);
                 "../tsgk/media/musics/"+media_Diretorio+".mp3";
-                document.getElementById('logo').src = "../tsgk/media/logos/"+valor_op+".png";
+                document.getElementById('logo').src = "../tsgk/media/logos/"+media_Diretorio+".png";
 
                 document.getElementById('option0'+op).style.borderColor = "#074900";
                 document.getElementsByClassName('options')[op-1].style.backgroundImage = "linear-gradient(to bottom, black, #1B9503)";
                 document.getElementsByClassName('options')[op-1].style.color = "white";
                 document.getElementsByClassName('options')[op-1].style.boxShadow = "0px 5px 1px #074900";
+
+                document.getElementsByClassName('anime-logo')[0].style.backgroundImage = "linear-gradient(to bottom, black, #1B9503)";
+                document.getElementById('logo').style.borderRadius = "100px";
+
                 pontuacao++;
-                setTimeout(random_music, 1000);
+                
+                setTimeout(random_music, 2000);
             }
         }
     }
